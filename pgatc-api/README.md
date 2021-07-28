@@ -5,15 +5,16 @@ changed from the src/main/resources application.properties file (spring.datasour
 
 This system will start under the basic embedded Spring Boot Tomcat port:  8080
 	- base URI:  http://localhost:8080/pgatc-rest-api
-		- boot path:  /boot
-		- enqueue path: (ex - /{id}/{model}/{size}
+		1. boot path - POST:
+			  /boot
+		2. enqueue path: - POST:  (ex - /{id}/{model}/{size}
 			- /{id} - valid Java Integer
 			--------  below values will be case INsensitive
 			- /{model} - valid values are "Emergency", "VIP", "Passenger", "Cargo"
 			- /{size}  - valid values are "Large" and "Small"
-		- dequeue path:
+		3. dequeue path - POST:
 			- /dequeue
-		- list path:
+		4. list path: - GET:
 			- /list
 
 This system will be inoperable until the /boot endpoint is called.
